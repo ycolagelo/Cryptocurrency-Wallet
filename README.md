@@ -24,5 +24,5 @@ Screenshot of hashed transaction
 ![image](screen.png)
 
 
-To launch the Streamlit application, type streamlit run krypto_jobs.py.
+To launch the Streamlit application, type streamlit run krypto_jobs.py into the terminal that contains the folder.
 
