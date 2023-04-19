@@ -30,7 +30,7 @@ from dataclasses import dataclass
 from typing import Any, List
 from web3 import Web3
 
-w3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:7545"))
+w3 = Web3(Web3.HTTPProvider('HTTP://127.0.0.1:7545'))
 
 
 ################################################################################
@@ -94,14 +94,14 @@ from crypto_wallet import generate_account, get_balance, send_transaction
 candidate_database = {
     "Lane": [
         "Lane",
-        "0xFE1be0D213924991168139030435f65F0c8cb512",
+        "0x7210Be1dDF9E6d37D8C0e6aB8406a32C0E71c22A",
         "4.3",
         0.20,
         "lane.jpeg",
     ],
     "Ash": [
         "Ash",
-        "0x75736F29767Ac59f5335BCFb5A308F108eaA4ca9",
+        "0x1027A9069e1CEdB256Fa9605063b2Ca5753C315a",
         "5.0",
         0.33,
         "ash.jpeg",
@@ -320,7 +320,7 @@ if st.sidebar.button("Send Transaction"):
     st.sidebar.write(f"Wage Calculation is {value}")
     
     # Send the transaction and get the transaction hash
-    transaction_hash = send_transaction( account, candidate_address, value)
+    transaction_hash = send_transaction(w3, account, candidate_address, wage)
     
     # Display the transaction hash on the application's web interface
     st.sidebar.write(f"Transaction Hash: {transaction_hash}")
